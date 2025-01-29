@@ -8,6 +8,7 @@
 }
 
 :root {
+  
   font-family: "Open Sans", sans-serif;
   font-size: clamp(16px, 2.5vmin, 60px);
   --paragraph-font-size: 1.1rem;
@@ -26,16 +27,26 @@
   --accent5: hsla(206, 46%, 40%, 1);
   --accent6: hsla(31, 84%, 51%, 1);
   --accent7: hsla(209, 70%, 21%, 1);
+  
+}
+
+html{
+  scrollbar-width: thin;
+  /* scrollbar-color: var(--color-fg) var(--color-bg); */
+  
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-fg);
   display: flex;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   flex-direction: column;
   justify-content: space-between;
   overflow-x: hidden;
+  
+
+  
 }
 
 h1,
@@ -78,12 +89,12 @@ header * {
 /* Main Content Styles */
 main {
   flex-grow: 1;
-  padding: calc(var(--padding-size) * 1.5);
+  padding: calc(var(--padding-size) * 7);
 }
 
 section {
   margin: 10px 0px;
-  padding: var(--padding-size);
+  padding: var(--padding-size)
 }
 
 section h1 {
@@ -98,18 +109,21 @@ section h1 {
   text-align: center;
 }
 
-.our-services h1 {
-}
+
 
 .services-container {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: center;
   grid-auto-flow: row;
-  gap: calc(var(--padding-size) * 3) calc(var(--padding-size) * 2);
-  /* text-align: center; */
+  gap: calc(var(--padding-size) * 3) calc(var(--padding-size) * 5);
+  text-align: center;
+}
+
+.services-container p{
+  margin: 0 10px;
 }
 
 .services-container .boxes {
@@ -156,12 +170,13 @@ section h1 {
   border-radius: 50%;
   justify-self: center;
   transition: all 0.5s;
+  filter: grayscale(80%);
 }
 
-.founders-info img:hover{
+.founders-info img:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 10px 1px gray;
-
+  filter: grayscale(0%);
 }
 
 .founders-info h1 {
@@ -210,12 +225,14 @@ footer * {
 /* Separator */
 .separator {
   width: 100%;
-  border: 3px solid var(--color-fg);
+  border: 5px solid var(--accent7);
   border-radius: 2rem;
+  margin-bottom: calc(var(--padding-size)*2);
+  transform: scale(1.02);
 }
 
 /* Media Queries */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .services-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -225,11 +242,19 @@ footer * {
   .founders-container > :is(.zurain-info, .ritvik-info) {
     min-width: 100%;
   }
+  main {
+    padding: calc(var(--padding-size) * 3);
+  }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 400px) {
   .services-container {
     grid-template-columns: 1fr;
+    padding: 0 calc(var(--padding-size) * );
+  }
+
+  main {
+    padding: calc(var(--padding-size) * 1);
   }
 }
 
