@@ -121,6 +121,8 @@ section h1 {
 
 .services-container .boxes:hover {
   transform: scale(1.05);
+  box-shadow: 0px 0px 10px 1px gray;
+
   /* border: none; */
 }
 
@@ -134,7 +136,7 @@ section h1 {
 }
 
 .founders-container > :is(.zurain-info, .ritvik-info) {
-  border: 2px solid black;
+  border: 5px solid var(--color-fg);
   border-radius: 10px;
   min-height: 200px;
   padding: var(--padding-size);
@@ -147,12 +149,19 @@ section h1 {
 }
 
 .founders-info img {
-  width: clamp(90px, 25vmin, 500px);
+  width: clamp(90px, 23vmin, 500px);
   aspect-ratio: 1/1;
   object-fit: cover;
   border: 0.3rem solid var(--accent2);
   border-radius: 50%;
   justify-self: center;
+  transition: all 0.5s;
+}
+
+.founders-info img:hover{
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px 1px gray;
+
 }
 
 .founders-info h1 {
