@@ -84,25 +84,21 @@ main {
 section {
   margin: 10px 0px;
   padding: var(--padding-size);
-  
 }
 
 section h1 {
   font-size: 1.5rem;
   /* text-wrap-mode: nowrap; */
   color: var(--accent1);
-
-
 }
 
 /* Services Section */
 
-.our-services > h1{
+.our-services > h1 {
   text-align: center;
-
 }
 
-.our-services h1{
+.our-services h1 {
 }
 
 .services-container {
@@ -146,9 +142,8 @@ section h1 {
   max-width: 50%;
 
   display: grid;
-  grid-template-rows: .2fr .1fr 1fr;
+  grid-template-rows: 0.2fr 0.1fr 1fr;
   grid-auto-flow: row;
-
 }
 
 .founders-info img {
@@ -164,23 +159,22 @@ section h1 {
   justify-self: center;
   font-size: 2rem;
   color: var(--accent1);
-  transition: all .2s;
-
+  transition: all 0.2s;
 }
 
-.founders-container h1 > a{
+.founders-container h1 > a {
   text-decoration: none;
   color: inherit;
   background-color: inherit;
 }
 
-.founders-container h1:hover{
+.founders-container h1:hover {
   transform: scale(1.1);
   color: var(--accent5);
   text-decoration: underline;
 }
 
-.founders-info p{
+.founders-info p {
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -234,44 +228,9 @@ footer * {
 .pwm {
   font-family: monospace, sans-serif;
   font-weight: bolder;
+  transition: all 0.2s;
 }
 
-.pwm > .pwm-emoji {
-  transition: font-size 0.2s;
-}
-
-.pwm > .pwm-hashtag {
-  transition: color 0.2s;
-}
-
-.pwm > .pwm-python {
-  transition: color 0.2s;
-}
-
-.pwm > .pwm-work {
-  transition: color 0.2s;
-}
-
-.pwm > .pwm-money {
-  transition: color 0.2s;
-}
-
-.pwm > .pwm-emoji:hover {
-  font-size: 1.1em;
-}
-
-.pwm > .pwm-hashtag:hover {
-  color: rgb(255, 82, 52);
-}
-
-.pwm > .pwm-python:hover {
-  color: rgb(67, 138, 245);
-}
-
-.pwm > .pwm-work:hover {
-  color: rgb(255, 255, 85);
-}
-
-.pwm > .pwm-money:hover {
-  color: rgb(104, 235, 87);
+.pwm:hover {
+  color: var(--accent1);
 }
