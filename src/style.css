@@ -8,7 +8,6 @@
 }
 
 :root {
-  
   font-family: "Open Sans", sans-serif;
   font-size: clamp(16px, 2.5vmin, 60px);
   --paragraph-font-size: 1.1rem;
@@ -27,13 +26,12 @@
   --accent5: hsla(206, 46%, 40%, 1);
   --accent6: hsla(31, 84%, 51%, 1);
   --accent7: hsla(209, 70%, 21%, 1);
-  
 }
 
-html{
+html {
   scrollbar-width: thin;
-  /* scrollbar-color: var(--color-fg) var(--color-bg); */
-  
+  scrollbar-color: var(--color-fg) var(--color-bg);
+  /* transition: all .1s; */
 }
 
 body {
@@ -44,9 +42,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   overflow-x: hidden;
-  
-
-  
 }
 
 h1,
@@ -94,11 +89,11 @@ main {
 
 section {
   margin: 10px 0px;
-  padding: var(--padding-size)
+  padding: var(--padding-size);
 }
 
 section h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   /* text-wrap-mode: nowrap; */
   color: var(--accent1);
 }
@@ -108,8 +103,6 @@ section h1 {
 .our-services > h1 {
   text-align: center;
 }
-
-
 
 .services-container {
   margin-top: 10px;
@@ -122,7 +115,7 @@ section h1 {
   text-align: center;
 }
 
-.services-container p{
+.services-container p {
   margin: 0 10px;
 }
 
@@ -181,7 +174,7 @@ section h1 {
 
 .founders-info h1 {
   justify-self: center;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   color: var(--accent1);
   transition: all 0.2s;
 }
@@ -205,16 +198,15 @@ section h1 {
 
 /* Footer Styles */
 footer {
-  position: relative;
-  bottom: 0px;
   width: 100%;
   align-self: center;
-  min-height: 100px;
+  min-height: 60px;
   background-color: var(--color-fg);
   color: var(--color-bg);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: var(--accent3)
 }
 
 footer * {
@@ -227,7 +219,7 @@ footer * {
   width: 100%;
   border: 5px solid var(--accent7);
   border-radius: 2rem;
-  margin-bottom: calc(var(--padding-size)*2);
+  margin-bottom: calc(var(--padding-size) * 2);
   transform: scale(1.02);
 }
 
@@ -245,16 +237,24 @@ footer * {
   main {
     padding: calc(var(--padding-size) * 3);
   }
+
+  .founders-info img {
+    box-shadow: 0px 0px 10px 1px gray;
+    filter: grayscale(0%);
+  }
 }
 
 @media only screen and (max-width: 400px) {
   .services-container {
     grid-template-columns: 1fr;
-    padding: 0 calc(var(--padding-size) * );
+    padding: 0 calc(var(--padding-size) *1);
   }
 
   main {
     padding: calc(var(--padding-size) * 1);
+  }
+  p{
+    font-size: 18px;
   }
 }
 
@@ -268,3 +268,4 @@ footer * {
 .pwm:hover {
   color: var(--accent1);
 }
+
