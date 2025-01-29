@@ -1,3 +1,4 @@
+/* Global Styles */
 *,
 *::before,
 *::after {
@@ -5,17 +6,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 :root {
   font-family: "Open Sans", sans-serif;
-
-  font-size: clamp(14px, 2.5vmin, 60px);
-
+  font-size: clamp(16px, 2.5vmin, 60px);
   --paragraph-font-size: 1.1rem;
   --h1-font-size: 2.2rem;
   --h2-font-size: 1.3rem;
   --padding-size: 10px;
   /* COLOR DEFINITIONS */
-
   --color-bg: #f4f6ff;
   --color-fg: #2a3335;
   --color-orange: #eb8317;
@@ -26,7 +25,6 @@
 body {
   background-color: var(--color-bg);
   color: var(--color-fg);
-  /* position: relative; */
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -37,25 +35,21 @@ body {
 h1 {
   font-size: var(--h1-font-size);
 }
+
 h2 {
   font-size: var(--h2-font-size);
 }
 
-/* --------------------------------------------------- */
-header,
-footer {
-  background-color: var(--color-fg);
-  color: var(--color-bg);
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  justify-content: center;
-}
-
+/* Header Styles */
 header {
   position: relative;
   top: 0px;
   min-height: 100px;
+  background-color: var(--color-fg);
+  color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 header * {
@@ -63,22 +57,22 @@ header * {
   text-align: center;
 }
 
+/* Main Content Styles */
 main {
   flex-grow: 1;
   padding: calc(var(--padding-size) * 1.5);
 }
+
 section {
   margin: 10px 0px;
-  /* border: 4px solid var(--color-fg); */
-  /* border-radius: 10px; */
   padding: var(--padding-size);
 }
 
 section h1 {
   font-size: 1.5rem;
-  /* color: var(--color-orange); */
 }
 
+/* Services Section */
 .services-container {
   margin-top: 10px;
   display: grid;
@@ -86,14 +80,13 @@ section h1 {
   grid-template-rows: 1fr;
   justify-content: center;
   grid-auto-flow: row;
-  /* min-width: 100px; */
   gap: calc(var(--padding-size) * 3) calc(var(--padding-size) * 2);
 }
+
 .services-container .boxes {
   border: 4px solid var(--color-orange);
   border-radius: 10px;
   transition: transform 0.2s, background-color 0.2s, color 0.2s;
-  min-height: 200px;
   padding: var(--padding-size);
 }
 
@@ -102,14 +95,45 @@ section h1 {
   background-color: var(--color-fg);
   color: var(--color-bg);
   border: none;
-  /* margin: 0 100px; */
 }
+
+/* Founders Section */
+.founders-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: var(--padding-size);
+  margin: var(--padding-size) 0;
+}
+
+.founders-container > :is(.zurain-info, .ritvik-info) {
+  border: 2px solid black;
+  border-radius: 10px;
+  min-height: 200px;
+  padding: var(--padding-size);
+  flex-grow: 1;
+}
+
+.founders-info img {
+  width: clamp(90px, 20vmin, 400px);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 0.25rem solid greenyellow;
+  border-radius: 50%;
+}
+
+/* Footer Styles */
 footer {
   position: relative;
   bottom: 0px;
   width: 100%;
   align-self: center;
   min-height: 100px;
+  background-color: var(--color-fg);
+  color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 footer * {
@@ -117,17 +141,20 @@ footer * {
   text-align: center;
 }
 
+/* Separator */
 .separator {
   width: 100%;
-  /* height:5px; */
-  /* background-color: ; */
   border: 3px solid var(--color-fg);
   border-radius: 2rem;
 }
 
+/* Media Queries */
 @media only screen and (max-width: 600px) {
   .services-container {
     grid-template-columns: 1fr 1fr;
+  }
+  .founders-container {
+    flex-direction: column;
   }
 }
 
@@ -137,44 +164,48 @@ footer * {
   }
 }
 
-/* SPANS */
+/* Span Styles */
 .pwm {
   font-family: monospace, sans-serif;
   font-weight: bolder;
-  
 }
 
 .pwm > .pwm-emoji {
-    transition: font-size .2s;
+  transition: font-size 0.2s;
 }
+
 .pwm > .pwm-hashtag {
-    transition: color .2s;
+  transition: color 0.2s;
 }
+
 .pwm > .pwm-python {
-    transition: color .2s;
-
+  transition: color 0.2s;
 }
+
 .pwm > .pwm-work {
-    transition: color .2s;
-
+  transition: color 0.2s;
 }
-.pwm > .pwm-money {
-    transition: color .2s;
 
+.pwm > .pwm-money {
+  transition: color 0.2s;
 }
 
 .pwm > .pwm-emoji:hover {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
+
 .pwm > .pwm-hashtag:hover {
-    color: rgb(255, 82, 52);
+  color: rgb(255, 82, 52);
 }
+
 .pwm > .pwm-python:hover {
-    color:rgb(67, 138, 245)
+  color: rgb(67, 138, 245);
 }
+
 .pwm > .pwm-work:hover {
-    color: rgb(255, 255, 85);
+  color: rgb(255, 255, 85);
 }
+
 .pwm > .pwm-money:hover {
-    color: rgb(104, 235, 87);
+  color: rgb(104, 235, 87);
 }
