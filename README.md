@@ -4,11 +4,6 @@
 
 Webpage for Python Work for Money group. Shows detail of founders, description of services and the social handles of the team.
 
-### Contributers
-
-- [@fecty](https://github.com/fecty)
-- [@intenzi](https://github.com/Intenzi)
-
 ## Project Structure
 
 ```
@@ -26,3 +21,8 @@ README.md    # Project information
 ## License
 
 Refer to `LICENSE` for details.
+
+## Contributers
+
+- [@fecty](https://github.com/fecty)
+- [@intenzi](https://github.com/Intenzi)
